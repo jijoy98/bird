@@ -1,9 +1,9 @@
-import random
+Gaming Guess
 
 def guess_the_number():
     print("Welcome to Guess the Number!")
     
-    # Generate a random number between 1 and 100
+# Generate a random number between 1 and 100
     secret_number = random.randint(1, 100)
     
     attempts = 0
@@ -17,10 +17,10 @@ def guess_the_number():
             print("Please enter a valid number.")
             continue
         
-        # Increment the attempts counter
+# Increment the attempts counter
         attempts += 1
         
-        # Check if the guess is correct
+# Check if the guess is correct
         if guess == secret_number:
             print(f"Congratulations! You guessed the number in {attempts} attempts.")
             print(f"Your final score is: {score}")
@@ -30,12 +30,12 @@ def guess_the_number():
         else:
             print("Too high! Try again.")
         
-        # Update the score based on the difference between the guess and the secret number
+ # Update the score based on the difference between the guess and the secret number
         score -= abs(secret_number - guess) * 2
         
-        # Provide feedback on the score
-        if score < 0:
-            score = 0
+# Provide feedback on the score
+        if score < 5:
+            score = 10
         print(f"Current score: {score}")
     
 if __name__ == "__main__":
